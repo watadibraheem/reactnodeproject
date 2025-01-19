@@ -57,7 +57,16 @@ The **Fuel Management System** is a React application designed to streamline fue
 
 ## Screenshots
 
-Here are some screenshots demonstrating key functionalities of the application:
+- **Home Page**:  
+  ![Home Page](screenshots/HomePageSS.png)
+
+- **About Page**:  
+  ![About Page](screenshots/about_page.png)
+
+- **Contact Page**:  
+  ![Contact Page](screenshots/contact_page.png)
+
+Here are some screenshots demonstrating key functionalities:
 
 ### 1. Auto-Approved Request (<200 Shekels)
 
