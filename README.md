@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Fuel Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The **Fuel Management System** is a React application designed to streamline fuel requests and approvals for efficient operations. This system allows users to submit fuel requests, admins to manage approvals for requests exceeding predefined thresholds, and tracks all actions in real-time via an activity log.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### 🚗 Submit Requests
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Users can submit fuel requests by providing:
+  - Driver name
+  - Car plate number
+  - Requested fuel amount
+  - Business name
+  - Location
+- Requests are handled based on their fuel amount:
+  - **Requests under 200 shekels** are auto-approved and logged directly in the activity log.
+  - **Requests over 200 shekels** require admin approval and appear in the admin dashboard for further action.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🛠️ Admin Dashboard
 
-### `npm test`
+- Admins have access to a dedicated dashboard to:
+  - Approve or reject fuel requests exceeding 200 shekels.
+  - View and manage rejected requests in a separate list.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 📋 Activity Log
 
-### `npm run build`
+- A centralized page for tracking all actions related to fuel requests:
+  - Displays details of approved and completed requests, including:
+    - Driver name
+    - Car plate number
+    - Fuel amount
+    - Business name
+    - Location
+    - Status (auto-approved/admin-approved)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How It Works
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Requests <200 Shekels**:
 
-### `npm run eject`
+   - Automatically approved without admin intervention.
+   - Directly added to the activity log.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Requests >200 Shekels**:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   - Appear in the admin dashboard for review.
+   - Admins can either approve or reject these requests.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Admin Actions**:
+   - Approved requests are added to the activity log.
+   - Rejected requests are moved to a separate rejected list in the admin dashboard.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Here are some screenshots demonstrating key functionalities of the application:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 1. Auto-Approved Request (<200 Shekels)
 
-### Code Splitting
+![Fuel Request Under 200 Shekels](screenshots/fuel_request_under_200.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- A request for under 200 shekels is automatically approved.
+- Displays the success message and the request appearing in the activity log.
 
-### Analyzing the Bundle Size
+### 2. Pending Request (>200 Shekels)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Fuel Request Over 200 Shekels](screenshots/fuel_request_over_200.png)
 
-### Making a Progressive Web App
+- A request for over 200 shekels appears in the admin dashboard with a pending status.
+- Highlights options for the admin to approve or reject the request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 3. Admin Dashboard with Pending Request
 
-### Advanced Configuration
+![Admin Dashboard Pending Request](screenshots/admin_dashboard_pending_request.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- The admin dashboard shows a pending request that requires review.
+- Demonstrates admin actions for approving or rejecting requests.
 
-### Deployment
+### 4. Activity Log
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![Activity Log Requests](screenshots/activity_log_requests.png)
 
-### `npm run build` fails to minify
+- The activity log displays both auto-approved requests (<200 shekels) and admin-approved requests (>200 shekels).
+- Includes detailed information such as driver name, fuel amount, business name, location, and status.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## Additional Notes
+
+- Requests under 200 shekels are automatically approved to optimize workflow and save admin effort.
+- Admins play a crucial role in reviewing and handling higher-value fuel requests to ensure proper oversight.
+- Activity logs provide full transparency and accountability, with detailed tracking of all actions.
+
+---
