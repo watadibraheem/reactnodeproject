@@ -1,0 +1,292 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.home-page {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.home-page p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.home-navigation button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.home-navigation button:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.home-navigation a {
+  text-decoration: none;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.header-logo img {
+  height: 40px;
+  margin-right: 20px;
+  margin-left: 45px;
+}
+
+.header-logo h1 {
+  font-size: 0.9rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  padding: 10px 15px;
+  margin: 0 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-list li:hover {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: #4caf50;
+}
+
+.main-footer {
+  text-align: center;
+  padding: 4px;
+  background-color: #282c34;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.contact-page {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.contact-page h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-page ul {
+  margin-left: 20px;
+  list-style-type: none;
+}
+
+.contact-page ul li {
+  margin-bottom: 5px;
+}
+
+.fuel-request-page {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.fuel-request-page form {
+  margin-bottom: 20px;
+}
+
+.fuel-request-page form div {
+  margin-bottom: 10px;
+}
+
+.fuel-request-page label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.fuel-request-page input,
+.fuel-request-page textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.fuel-request-page button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fuel-request-page button:hover {
+  background-color: #45a049;
+}
+
+.fuel-request-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fuel-request-page li {
+  background-color: #f9f9f9;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.fuel-request-page strong {
+  color: #333;
+}
+
+.admin-dashboard ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-dashboard li {
+  background-color: #f9f9f9;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.admin-dashboard button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.admin-dashboard button:nth-child(2) {
+  background-color: #f44336;
+}
+
+.admin-dashboard button:hover {
+  opacity: 0.8;
+}
+
+.activity-log table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.activity-log th,
+.activity-log td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.activity-log th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.activity-log tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.activity-log tr:hover {
+  background-color: #f1f1f1;
+}
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+  }
+
+.about-page h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.about-page p,
+.about-page ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
