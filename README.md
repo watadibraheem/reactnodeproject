@@ -1,6 +1,6 @@
 # Fuel Management System
 
-The **Fuel Management System** is a React application designed to streamline fuel requests and approvals for efficient operations. This system allows users to submit fuel requests, admins to manage approvals for requests exceeding predefined thresholds, and tracks all actions in real-time via an activity log.
+The **Fuel Management System** is to streamline fuel requests and approvals for efficient operations. This system allows users to submit fuel requests, admins to manage approvals for requests exceeding predefined thresholds, and tracks all actions in real-time via an activity log.
 
 ---
 
