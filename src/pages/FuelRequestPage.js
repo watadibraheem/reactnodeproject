@@ -31,12 +31,10 @@ function FuelRequestPage({ setPendingRequests, setActivityLog }) {
 
     if (formData.fuelAmount > 200) {
       setPendingRequests((prev) => {
-        console.log("Updated Pending Requests:", [...prev, newRequest]);
         return [...prev, newRequest];
       });
     } else {
       setActivityLog((prev) => {
-        console.log("Updated Activity Log:", [...prev, newRequest]);
         return [...prev, newRequest];
       });
     }
