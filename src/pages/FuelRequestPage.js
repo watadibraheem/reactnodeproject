@@ -25,7 +25,6 @@ function FuelRequestPage({ setPendingRequests, setActivityLog }) {
       ...formData,
       status: formData.fuelAmount > 200 ? "Pending Approval" : "Auto-Approved",
     };
-    
 
     setFuelRequests([...fuelRequests, newRequest]);
 
@@ -47,7 +46,6 @@ function FuelRequestPage({ setPendingRequests, setActivityLog }) {
       stationLocation: "Station A",
     });
   };
-
 
   return (
     <div className="fuel-request-page">
@@ -106,7 +104,6 @@ function FuelRequestPage({ setPendingRequests, setActivityLog }) {
           </select>
         </div>
         <button type="submit">Submit Request</button>
-        
       </form>
     </div>
   );
