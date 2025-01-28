@@ -1,5 +1,5 @@
 import React from "react";
-// , { useState }
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 function AdminDashboardPage({
@@ -9,6 +9,12 @@ function AdminDashboardPage({
   rejectedRequests,
   setRejectedRequests,
 }) {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1); // ✅ Navigate to the last visited page
+  };
+
   const handleAction = (id, action) => {
     const request = pendingRequests.find((req) => req.id === id);
 
@@ -29,7 +35,12 @@ function AdminDashboardPage({
     <div className="admin-dashboard">
       <h1>Admin Dashboard</h1>
 
-      <h2>Pending Requests</h2>
+      {/* ✅ Back Button */}
+      <button className="back-btn" onClick={handleBack}>
+        ⬅ Back
+      </button>
+
+      <h2 className="pending-requests">Pending Requests</h2>
 
       {pendingRequests.length === 0 ? (
         <p>No pending requests.</p>
@@ -37,38 +48,52 @@ function AdminDashboardPage({
         <ul>
           {pendingRequests.map((request) => (
             <li key={request.id}>
-              <strong>Driver Name:</strong> {request.driverName} |
-              <strong>Car Plate:</strong> {request.carPlate} |
-              <strong>Fuel Amount:</strong> {request.fuelAmount} |
-              <strong>Business:</strong> {request.businessName} |
-              <strong>Location:</strong> {request.stationLocation}
+              <div className="request-info">
+                <strong>Driver Name:</strong> {request.driverName} |
+                <strong>Car Plate:</strong> {request.carPlate} |
+                <strong>Fuel Amount:</strong> {request.fuelAmount} |
+                <strong>Business:</strong> {request.businessName} |
+                <strong>Location:</strong> {request.stationLocation}
+              </div>
               <br />
-              <button onClick={() => handleAction(request.id, "approved")}>
-                Approve
-              </button>
-              <button onClick={() => handleAction(request.id, "rejected")}>
-                Reject
-              </button>
+              <div className="request-buttons">
+                <button
+                  className="approve-btn"
+                  onClick={() => handleAction(request.id, "approved")}
+                >
+                  Approve
+                </button>
+                <button
+                  className="reject-btn"
+                  onClick={() => handleAction(request.id, "rejected")}
+                >
+                  Reject
+                </button>
+              </div>
             </li>
           ))}
         </ul>
       )}
-      <h2>Rejected Requests</h2>
-      {rejectedRequests.length === 0 ? (
-        <p>No rejected requests.</p>
-      ) : (
-        <ul>
-          {rejectedRequests.map((request) => (
-            <li key={request.id}>
-              <strong>Driver Name:</strong> {request.driverName} |
-              <strong>Car Plate:</strong> {request.carPlate} |
-              <strong>Fuel Amount:</strong> {request.fuelAmount} |
-              <strong>Business:</strong> {request.businessName} |
-              <strong>Location:</strong> {request.stationLocation}
-            </li>
-          ))}
-        </ul>
-      )}
+      <div className="rejected-requests">
+        <h2>Rejected Requests</h2>
+        {rejectedRequests.length === 0 ? (
+          <p>No rejected requests.</p>
+        ) : (
+          <ul>
+            {rejectedRequests.map((request) => (
+              <li key={request.id}>
+                <div className="request-info">
+                  <strong>Driver Name:</strong> {request.driverName} |
+                  <strong>Car Plate:</strong> {request.carPlate} |
+                  <strong>Fuel Amount:</strong> {request.fuelAmount} |
+                  <strong>Business:</strong> {request.businessName} |
+                  <strong>Location:</strong> {request.stationLocation}
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }

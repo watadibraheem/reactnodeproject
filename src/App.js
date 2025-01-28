@@ -8,12 +8,21 @@ import ContactPage from "./pages/ContactPage";
 import FuelRequestPage from "./pages/FuelRequestPage";
 import AdminDashboardPage from "./pages/AdminDashboardPage";
 import ActivityLogPage from "./pages/ActivityLogPage";
+import SingleLog from "./pages/SingleLog";
+import EditLog from "./pages/EditLog";
 
 
 function App() {
   const [pendingRequests, setPendingRequests] = useState([]);
   const [activityLog, setActivityLog] = useState([]);
   const [rejectedRequests, setRejectedRequests] = useState([]);
+
+  const updateLog = (updatedLog) => {
+    setActivityLog((prevLogs) =>
+      prevLogs.map((log) => (log.id === updatedLog.id ? updatedLog : log))
+    );
+  };
+
 
   return (
     <Router>
@@ -53,7 +62,18 @@ function App() {
         />
         <Route
           path="/activity-log"
-          element={<ActivityLogPage activityLog={activityLog} />}
+          element={
+            <ActivityLogPage
+              activityLog={activityLog}
+              setActivityLog={setActivityLog}
+            />
+          }
+          key={activityLog.length}
+        />
+        <Route path="/single-log" element={<SingleLog />} />
+        <Route
+          path="/edit-log/:id"
+          element={<EditLog updateLog={updateLog} />}
         />
       </Routes>
       <Footer />
