@@ -19,7 +19,7 @@ function App() {
 
   const updateLog = (updatedLog) => {
     setActivityLog((prevLogs) =>
-      prevLogs.map((log) => (log.id === updatedLog.id ? updatedLog : log))
+      prevLogs.map((log) => (log.id ===   updatedLog.id ? updatedLog : log))
     );
   };
 
@@ -52,6 +52,7 @@ function App() {
           path="/admin-dashboard"
           element={
             <AdminDashboardPage
+            
               pendingRequests={pendingRequests}
               setPendingRequests={setPendingRequests}
               rejectedRequests={rejectedRequests}
