@@ -1,107 +1,103 @@
-# Fuel Management System
+# Fuel Management System 🚗⛽
 
-The **Fuel Management System** is to streamline fuel requests and approvals for efficient operations. This system allows users to submit fuel requests, admins to manage approvals for requests exceeding predefined thresholds, and tracks all actions in real-time via an activity log.
+The **Fuel Management System** is designed to streamline fuel requests and approvals efficiently. This system allows **users** to submit fuel requests, **admins** to manage approvals for high-value requests, and **tracks all actions** via an activity log.
 
 ---
 
-## Features
+## 🚀 Features
 
-### 🚗 Submit Requests
+### ✅ Submit Fuel Requests
 
 - Users can submit fuel requests by providing:
-  - Driver name
-  - Car plate number
-  - Requested fuel amount
-  - Business name
-  - Location
-- Requests are handled based on their fuel amount:
-  - **Requests under 200 shekels** are auto-approved and logged directly in the activity log.
-  - **Requests over 200 shekels** require admin approval and appear in the admin dashboard for further action.
-
-### 🛠️ Admin Dashboard
-
-- Admins have access to a dedicated dashboard to:
-  - Approve or reject fuel requests exceeding 200 shekels.
-  - View and manage rejected requests in a separate list.
-
-### 📋 Activity Log
-
-- A centralized page for tracking all actions related to fuel requests:
-  - Displays details of approved and completed requests, including:
-    - Driver name
-    - Car plate number
-    - Fuel amount
-    - Business name
-    - Location
-    - Status (auto-approved/admin-approved)
+  - **Driver Name**
+  - **Car Plate Number**
+  - **Requested Fuel Amount**
+  - **Business Name**
+  - **Location**
+- **Approval System:**
+  - **Requests ≤ 200 shekels** → Auto-approved ✅.
+  - **Requests > 200 shekels** → Requires **admin approval** 🚦.
 
 ---
 
-## How It Works
-
-1. **Requests <200 Shekels**:
-
-   - Automatically approved without admin intervention.
-   - Directly added to the activity log.
-
-2. **Requests >200 Shekels**:
-
-   - Appear in the admin dashboard for review.
-   - Admins can either approve or reject these requests.
-
-3. **Admin Actions**:
-   - Approved requests are added to the activity log.
-   - Rejected requests are moved to a separate rejected list in the admin dashboard.
+### 🛠️ **Admin Dashboard**
+- Admins can:
+  - **Approve/Reject** fuel requests over **200 shekels**.
+  - **View and manage** pending and rejected requests.
+  - **Register new users** (Only admins can add users).
+  - **Delete fuel requests** when necessary.
 
 ---
 
-## Screenshots
-
-- **Home Page**:  
-  ![Home Page](screenshots/HomePageSS.png)
-
-- **About Page**:  
-  ![About Page](screenshots/about_page.png)
-
-- **Contact Page**:  
-  ![Contact Page](screenshots/contact_page.png)
-
-Here are some screenshots demonstrating key functionalities:
-
-### 1. Auto-Approved Request (<200 Shekels)
-
-![Fuel Request Under 200 Shekels](screenshots/fuel_request_under_200.png)
-
-- A request for under 200 shekels is automatically approved.
-- Displays the success message and the request appearing in the activity log.
-
-### 2. Pending Request (>200 Shekels)
-
-![Fuel Request Over 200 Shekels](screenshots/fuel_request_over_200.png)
-
-- A request for over 200 shekels appears in the admin dashboard with a pending status.
-- Highlights options for the admin to approve or reject the request.
-
-### 3. Admin Dashboard with Pending Request
-
-![Admin Dashboard Pending Request](screenshots/admin_dashboard_pending_request.png)
-
-- The admin dashboard shows a pending request that requires review.
-- Demonstrates admin actions for approving or rejecting requests.
-
-### 4. Activity Log
-
-![Activity Log Requests](screenshots/activity_log_requests.png)
-
-- The activity log displays both auto-approved requests (<200 shekels) and admin-approved requests (>200 shekels).
-- Includes detailed information such as driver name, fuel amount, business name, location, and status.
+### 📋 **Activity Log**
+- **Tracks all fuel requests** (Approved, Auto-Approved, Rejected).
+- Displays key details:
+  - **Driver Name**
+  - **Car Plate Number**
+  - **Fuel Amount**
+  - **Business Name**
+  - **Status** (Auto-Approved/Admin-Approved/Rejected)
 
 ---
 
-## Additional Notes
+### 👤 **User Profile Management**
+**(New Feature)**
+- Users can **edit their profile**:
+  - **Update Email, Phone, Contact Person**.
+  - **Upload a Profile Picture** 📸 (Stored using **Multer**).
+- Profile pictures are displayed throughout the app.
 
-- Requests under 200 shekels are automatically approved to optimize workflow and save admin effort.
-- Admins play a crucial role in reviewing and handling higher-value fuel requests to ensure proper oversight.
-- Activity logs provide full transparency and accountability, with detailed tracking of all actions.
+---
+
+### ❌ **Delete Log Feature**
+**(New Feature)**
+- Users can **delete their own logs**, and admins can delete **any** log.
+- Deleted logs are **removed from the database** permanently.
+
+---
+
+### 🔒 **Security Updates**
+- **Password Validation** in the **Register Page**:
+  - **Minimum 8 characters**.
+  - **At least 1 uppercase letter**.
+  - **At least 1 lowercase letter**.
+  - **At least 1 number**.
+  - **At least 1 special character** (@, $, !, %, *, ?, &).
+
+---
+
+## 🏗️ **How It Works**
+### **1️⃣ Requests ≤ 200 Shekels**
+- ✅ **Auto-approved** & logged **immediately**.
+- 📜 **Appears in the activity log**.
+
+### **2️⃣ Requests > 200 Shekels**
+- 🚦 **Requires Admin Approval**.
+- 📍 **Appears in Admin Dashboard** for review.
+
+### **3️⃣ Admin Actions**
+- 🟢 **Approved Requests** → Move to **Activity Log**.
+- 🔴 **Rejected Requests** → Saved in a **separate rejected list**.
+
+---
+
+## **🛠️ Tech Stack**
+- **Frontend**: React.js ⚛️
+- **Backend**: Node.js + Express.js 🚀
+- **Database**: MySQL 🗄️
+- **Authentication**: Sessions (Express-Session) 🔐
+- **File Uploads**: Multer 🖼️
+
+---
+
+## **📌 Additional Notes**
+- **Profile Pictures are uploaded** & stored **using Multer**.
+- **Admins can manage users** & control fuel requests.
+- **Activity Logs provide full transparency** on fuel requests.
+
+---
+
+🚀 **Project is now fully functional with new features!** 🎯  
+✅ **Updated with Profile Management, Log Deletion, Security Fixes, and Improved UI!**  
 
 ---
