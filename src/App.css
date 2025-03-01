@@ -202,7 +202,7 @@
   border-radius: 4px;
 }
 
-.fuel-request-page button {
+.submitRequest-btn {
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
@@ -318,6 +318,16 @@
   background-color: #d32f2f;
 }
 
+.activity-log {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
 .activity-log table {
   width: 100%;
   border-collapse: collapse;
@@ -344,15 +354,16 @@
   background-color: #f1f1f1;
 }
 
-.activity-log button {
-  width: 50%;
+.viewLog-btn {
+  width: 40%;
   padding: 10px;
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 5px;
+  margin-left: 5px;
 }
 
 .about-page {
@@ -479,3 +490,233 @@
   background-color: #45a049;
 }
 
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.login-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container label {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-container button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.header-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.header-btn:hover {
+  transform: translateY(-2px);
+}
+
+.header-btn:active {
+  transform: translateY(1px);
+}
+
+.nav-list li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s;
+}
+
+.register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.register-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container label {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.register-container input,
+.register-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.register-container button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.register-container button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.register-user-btn {
+  display: inline-block;
+  margin: 15px 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.register-user-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.register-user-btn:active {
+  transform: translateY(1px);
+}
+
+.profile-edit-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.profile-edit-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profile-edit-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-edit-container label {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.profile-edit-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.profile-edit-container button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.profile-edit-container button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.profile-preview {
+  max-width: 100px;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+
+.password-error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
